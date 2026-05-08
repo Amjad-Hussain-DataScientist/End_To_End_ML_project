@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: Ml-end-to-end-project
+Version: 0.0.1
+Author: Amjad Hussain
+Author-email: engramjad.hu@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Requires-Dist: setuptools
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
