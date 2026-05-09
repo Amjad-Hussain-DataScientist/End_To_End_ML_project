@@ -3,6 +3,7 @@
 # importing libraries
 
 import sys #sys is like system helper module.
+from src.logger import logging
 
 # making function that return error and error detail which is present in sys
 
