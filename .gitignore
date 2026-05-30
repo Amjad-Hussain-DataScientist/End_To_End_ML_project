@@ -13,6 +13,11 @@ catboost_info/
 projectvenv/
 .ipynb_checkpoints/
 
+# Ignore local database files and Anaconda project artifacts
+*.db
+**/anaconda_projects/
+
+
 # C extensions
 *.so
 
