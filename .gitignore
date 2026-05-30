@@ -1,7 +1,17 @@
 # Byte-compiled / optimized / DLL files
+catboost_info/
 __pycache__/
 *.py[codz]
 *$py.class
+
+# Block catboost logs anywhere in the project
+**/catboost_info/
+catboost_info/
+
+# Block python cache and environment files
+**/__pycache__/
+projectvenv/
+.ipynb_checkpoints/
 
 # C extensions
 *.so
