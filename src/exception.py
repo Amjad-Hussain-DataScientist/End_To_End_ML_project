@@ -17,15 +17,15 @@ def error_message_detail(error,error_detail:sys):
 
    # making class of custom exception which inherate from Exception
 
-   class CustomeException(Exception):
-      def __init__(self,error_message,error_detail:sys):
-         super().__init__(error_message) # inherate error message from exception module
+class CustomeException(Exception):
+   def __init__(self,error_message,error_detail:sys):
+      super().__init__(error_message) # inherate error message from exception module
 
-         self.error_message = error_message_detail(error_message,error_detail=error_detail)
+      self.error_message = error_message_detail(error_message,error_detail=error_detail)
     
     #print message when error occured
-      def __str__(self):
-          return self.error_message
+   def __str__(self):
+      return self.error_message
       
 # so this exception handling and we use it where we require
        
