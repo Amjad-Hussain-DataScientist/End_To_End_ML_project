@@ -18,6 +18,7 @@ in short it create class variable and avoid to use __init__
 '''
 
 #defing class for data_ingestion component
+# It defines the file paths where the training, testing, and raw datasets will be stored and accessed.
 
 @dataclass # this is a decorator
 class DataIngestionConfig:
@@ -26,13 +27,15 @@ class DataIngestionConfig:
   raw_data_path:str = os.path.join('artifacts','data.csv')
 
 class DataIngestion:
+ 
   def __init__(self):
-    self.ingestion_config = DataIngestion()
+    self.ingestion_config = DataIngestionConfig()
 
 class DataIngestion:
   def __init__(self):
-    self.ingestion_config = DataIngestionConfig()
-  # make own class that read data from any source 
+    self.ingestion_config = DataIngestionConfig() # #initializes the data ingestion process by loading  predefined dataset file paths.
+
+  # make own class that read data from any source and then split the data and save in the artifact dir
   def initiate_data_ingestion(self):
     logging.info('Data Ingestion method starts/entered the data ingestion components')
     try:
