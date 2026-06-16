@@ -8,6 +8,9 @@ from src.logger import logging
 import pandas as pd
 # after reading we need to split the data into train and test
 from sklearn.model_selection import train_test_split
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig # these two use here to check either transformation is working or not 
+
 
 from dataclasses import dataclass 
 '''
@@ -39,7 +42,7 @@ class DataIngestion:
   def initiate_data_ingestion(self):
     logging.info('Data Ingestion method starts/entered the data ingestion components')
     try:
-      df = pd.read_csv('notebook\Data\students.csv') # need this line to be change to getting data from other source
+      df = pd.read_csv(r'notebook\Data\students.csv') # need this line to be change to getting data from other source
       logging.info('Read the dataset as dataframe')
       # now creating the artifacet w.r.t train_data_path
       os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
@@ -63,3 +66,6 @@ class DataIngestion:
 if __name__ == '__main__':
     obj = DataIngestion()
     train_data,test_data = obj.initiate_data_ingestion()
+    #to check trnsformation we make obj of class and call all function that we have
+    data_transfromation = DataTransformation()
+    data_transfromation.initiate_data_transformation(train_data,test_data)
