@@ -10,7 +10,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig # these two use here to check either transformation is working or not 
-
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer # to check either model_trainer is work or not
 
 from dataclasses import dataclass 
 '''
@@ -68,4 +69,7 @@ if __name__ == '__main__':
     train_data,test_data = obj.initiate_data_ingestion()
     #to check trnsformation we make obj of class and call all function that we have
     data_transfromation = DataTransformation()
-    data_transfromation.initiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,_= data_transfromation.initiate_data_transformation(train_data,test_data)
+
+    modeltrainer = ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr)) # this will give the r2_score
