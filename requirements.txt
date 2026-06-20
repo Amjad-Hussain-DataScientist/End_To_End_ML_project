@@ -4,8 +4,9 @@ matplotlib==3.9.2
 seaborn==0.13.2
 scikit-learn==1.5.2
 setuptools==75.1.0
-catboost==1.2.7
+#catboost==1.2.7
 xgboost==2.1.1
 dill==0.3.8
 flask==3.0.3
+gunicorn
 #-e .
