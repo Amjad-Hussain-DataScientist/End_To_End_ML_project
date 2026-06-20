@@ -50,3 +50,4 @@ def predict_datapoint():
         results = predict_pipline.predict(pred_df)
         return render_template('home.html', results = results[0]) #because it returning into list format
     # and we read this result value in html to return the final prediction in frontend 
+# to run the app.py we use 
