@@ -7,4 +7,5 @@ setuptools
 catboost
 xgboost
 dill
+flask
 #-e .
