@@ -2,7 +2,6 @@ pandas==2.2.3
 numpy==1.26.4
 scikit-learn==1.5.2
 setuptools==75.1.0
-xgboost==1.7.6
 dill==0.3.8
 flask==3.0.3
 gunicorn
