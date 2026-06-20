@@ -52,4 +52,4 @@ def predict_datapoint():
     # and we read this result value in html to return the final prediction in frontend 
 # to run the app.py we use 
 if __name__=="__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0",debug = True)
